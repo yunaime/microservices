@@ -1,8 +1,8 @@
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
+# ---
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
 ---
 spring:
   profiles: primary
