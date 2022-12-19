@@ -3,3 +3,24 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka,http://eureka-primary:8011/eureka/,http://eureka-secondary:8012/eureka/
+---
+spring:
+  profiles: primary
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-primary:8011/eureka/,http://eureka-secondary:8012/eureka/
+---
+spring:
+  profiles: secondary
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka,http://eureka-secondary:8012/eureka/
+---
+spring:
+  profiles: tertiary
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka,http://eureka-primary:8011/eureka/
