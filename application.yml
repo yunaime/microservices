@@ -6,6 +6,8 @@ eureka:
       defaultZone: http://eureka-primary:8010/eureka/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+words:
+  primero, segundo, tercero, cuarto
 # ---
 # spring:
 #   profiles: primary
