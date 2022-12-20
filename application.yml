@@ -2,39 +2,40 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
+#      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
+      defaultZone: http://eureka-primary:8010/eureka/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
----
-spring:
-  profiles: primary
-  application:
-    name: eureka-primary
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
-server:
-  port: 8010
----
-spring:
-  profiles: secondary
-  application:
-    name: eureka-secondary
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-tertiary:8012/eureka/
-server:
-  port: 8011
----
-spring:
-  profiles: tertiary
-  application:
-    name: eureka-tertiary
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/
-server:
-  port: 8012
+# ---
+# spring:
+#   profiles: primary
+#   application:
+#     name: eureka-primary
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://eureka-secondary:8011/eureka/,http://eureka-tertiary:8012/eureka/
+# server:
+#   port: 8010
+# ---
+# spring:
+#   profiles: secondary
+#   application:
+#     name: eureka-secondary
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://eureka-primary:8010/eureka/,http://eureka-tertiary:8012/eureka/
+# server:
+#   port: 8011
+# ---
+# spring:
+#   profiles: tertiary
+#   application:
+#     name: eureka-tertiary
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://eureka-primary:8010/eureka/,http://eureka-secondary:8011/eureka/
+# server:
+#   port: 8012
