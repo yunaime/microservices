@@ -50,7 +50,7 @@ words: ran,knew,had,saw,bought
 ---
 spring:
   profiles: article
-words: a,the
+words: ta,tata
 ---
 spring:
   profiles: adjective
