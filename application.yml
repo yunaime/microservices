@@ -49,10 +49,8 @@ spring:
 words: ran,knew,had,saw,bought
 ---
 spring:
-  config:
-    activate:
-      on-profile: article
-words: ta,tata
+  profiles: article
+words: a,the
 ---
 spring:
   profiles: adjective
